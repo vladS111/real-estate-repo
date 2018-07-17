@@ -1,0 +1,40 @@
+.filters {
+  flex: none;
+  box-shadow: 2px 2px 5px -1px rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  height: auto;
+  position: fixed;
+  background: #ffffff;
+  margin-top: 25px;
+  width: 450px; }
+  @media only screen and (max-width: 1024px) {
+    .filters {
+      width: 250px; } }
+  @media only screen and (max-width: 767px) {
+    .filters {
+      position: static;
+      flex: none;
+      width: auto;
+      margin: 0; } }
+  .filters .currency, .filters .price, .filters .rating, .filters .rooms {
+    margin-bottom: 20px; }
+  .filters .price div.price-input {
+    margin-top: 10px;
+    display: flex; }
+    @media only screen and (max-width: 1024px) {
+      .filters .price div.price-input {
+        flex-direction: column; } }
+    .filters .price div.price-input input[type=number]::-webkit-inner-spin-button,
+    .filters .price div.price-input input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0; }
+    .filters .price div.price-input input[type=number] {
+      margin: 0 10px;
+      width: 150px; }
+    @media only screen and (max-width: 1024px) {
+      .filters .price div.price-input label {
+        margin-top: 10px; } }
+  .filters .rating div.rating-input {
+    margin-top: 10px; }

@@ -1,0 +1,83 @@
+@import 'variables.scss';
+
+.property-card {
+  display: flex;
+  justify-items: flex-start;
+  box-shadow: 2px 2px 5px -1px rgba(0,0,0,0.75);
+  margin-bottom: 20px;
+  padding: 15px;
+  background: $white;
+  max-width: 750px;
+  @media only screen and (max-width: $desktopBreakpoint) {
+    max-width: 550px;
+  }
+  @media only screen and (max-width: $largeTabletBreakpoint) {
+    max-width: 350px;
+  }
+  @media only screen and (max-width: $desktopBreakpoint) {
+    flex-direction: column;
+  }
+  .left-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 20px;
+    @media only screen and (max-width: $desktopBreakpoint) {
+      width: 100%;
+      margin: 0;
+    }
+    .image {
+      width: 200px;
+      height: auto;
+      object-fit: contain;
+      margin: 10px;
+      @media only screen and (max-width: $desktopBreakpoint) {
+        width: 100%;
+      }
+    }
+    .rating {
+
+    }
+  }
+  .right-section {
+    width: 100%;
+    .address {
+      color: $darkBlue;
+      font-size: 150%;
+      @media only screen and (max-width: $tabletBreakpoint) {
+        text-align: center;
+      }
+    }
+    .description  {
+      margin: 0 0 15px 0;
+    }
+    .details {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      margin: 0 0 15px 0;
+      .rooms, .dates {
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        svg {
+          color: $blue;
+        }
+        p {
+          margin: 0 0 0 5px;
+        }
+      }
+    }
+    .purchase {
+      display: flex;
+      justify-content: flex-end;
+      button {
+        min-width: 200px;
+        @media only screen and (max-width: $tabletBreakpoint) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

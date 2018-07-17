@@ -1,0 +1,154 @@
+.main-page {
+  display: flex;
+  font-family: 'Roboto';
+  padding: 25px;
+  width: 100%; }
+  @media only screen and (max-width: 767px) {
+    .main-page {
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0; } }
+
+.property-card {
+  display: flex;
+  justify-items: flex-start;
+  box-shadow: 2px 2px 5px -1px rgba(0, 0, 0, 0.75);
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #ffffff;
+  max-width: 750px; }
+  @media only screen and (max-width: 1024px) {
+    .property-card {
+      max-width: 550px; } }
+  @media only screen and (max-width: 992px) {
+    .property-card {
+      max-width: 350px; } }
+  @media only screen and (max-width: 1024px) {
+    .property-card {
+      flex-direction: column; } }
+  .property-card .left-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 20px; }
+    @media only screen and (max-width: 1024px) {
+      .property-card .left-section {
+        width: 100%;
+        margin: 0; } }
+    .property-card .left-section .image {
+      width: 200px;
+      height: auto;
+      object-fit: contain;
+      margin: 10px; }
+      @media only screen and (max-width: 1024px) {
+        .property-card .left-section .image {
+          width: 100%; } }
+  .property-card .right-section {
+    width: 100%; }
+    .property-card .right-section .address {
+      color: #00004C;
+      font-size: 150%; }
+      @media only screen and (max-width: 767px) {
+        .property-card .right-section .address {
+          text-align: center; } }
+    .property-card .right-section .description {
+      margin: 0 0 15px 0; }
+    .property-card .right-section .details {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      margin: 0 0 15px 0; }
+      .property-card .right-section .details .rooms, .property-card .right-section .details .dates {
+        padding: 5px;
+        display: flex;
+        align-items: center; }
+        .property-card .right-section .details .rooms svg, .property-card .right-section .details .dates svg {
+          color: #33419E; }
+        .property-card .right-section .details .rooms p, .property-card .right-section .details .dates p {
+          margin: 0 0 0 5px; }
+    .property-card .right-section .purchase {
+      display: flex;
+      justify-content: flex-end; }
+      .property-card .right-section .purchase button {
+        min-width: 200px; }
+        @media only screen and (max-width: 767px) {
+          .property-card .right-section .purchase button {
+            width: 100%; } }
+
+.property-list {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  margin-left: 500px;
+  height: 100%; }
+  @media only screen and (max-width: 1024px) {
+    .property-list {
+      margin-left: 300px; } }
+  @media only screen and (max-width: 767px) {
+    .property-list {
+      margin-left: 0;
+      flex: none;
+      padding: 25px 5px;
+      align-items: center; } }
+  .property-list .search-results {
+    height: 100%;
+    background: #ffffff;
+    box-shadow: 2px 2px 5px -1px rgba(0, 0, 0, 0.75);
+    padding: 35px; }
+    .property-list .search-results .list-item {
+      margin-top: 10px; }
+  .property-list.loading {
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 60vh; }
+    @media only screen and (max-width: 767px) {
+      .property-list.loading {
+        width: 100%; } }
+
+.filters {
+  flex: none;
+  box-shadow: 2px 2px 5px -1px rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  height: auto;
+  position: fixed;
+  background: #ffffff;
+  margin-top: 25px;
+  width: 450px; }
+  @media only screen and (max-width: 1024px) {
+    .filters {
+      width: 250px; } }
+  @media only screen and (max-width: 767px) {
+    .filters {
+      position: static;
+      flex: none;
+      width: auto;
+      margin: 0; } }
+  .filters .currency, .filters .price, .filters .rating, .filters .rooms {
+    margin-bottom: 20px; }
+  .filters .price div.price-input {
+    margin-top: 10px;
+    display: flex; }
+    @media only screen and (max-width: 1024px) {
+      .filters .price div.price-input {
+        flex-direction: column; } }
+    .filters .price div.price-input input[type=number]::-webkit-inner-spin-button,
+    .filters .price div.price-input input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0; }
+    .filters .price div.price-input input[type=number] {
+      margin: 0 10px;
+      width: 150px; }
+    @media only screen and (max-width: 1024px) {
+      .filters .price div.price-input label {
+        margin-top: 10px; } }
+  .filters .rating div.rating-input {
+    margin-top: 10px; }
+
+body, html {
+  background: #b2b2d8;
+  overflow-x: hidden; }

@@ -1,0 +1,11 @@
+.main-page {
+  display: flex;
+  font-family: 'Roboto';
+  padding: 25px;
+  width: 100%; }
+  @media only screen and (max-width: 767px) {
+    .main-page {
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0; } }

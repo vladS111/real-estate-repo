@@ -1,0 +1,36 @@
+@import 'variables.scss';
+
+.property-list {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  margin-left: 500px;
+  height: 100%;
+  @media only screen and (max-width: $desktopBreakpoint) {
+    margin-left: 300px;
+  }
+  @media only screen and (max-width: $tabletBreakpoint) {
+    margin-left: 0;
+    flex: none;
+    padding: 25px 5px;
+    align-items: center;
+  }
+  .search-results {
+    height: 100%;
+    background: $white;
+    box-shadow: 2px 2px 5px -1px rgba(0,0,0,0.75);
+    padding: 35px;
+    .list-item {
+      margin-top: 10px;
+    }
+  }
+  &.loading {
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 60vh;
+    @media only screen and (max-width: $tabletBreakpoint) {
+      width: 100%;
+    }
+  }
+}

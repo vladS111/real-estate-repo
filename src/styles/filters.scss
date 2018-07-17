@@ -1,0 +1,57 @@
+@import 'variables.scss';
+
+.filters {
+  flex: none;
+  box-shadow: 2px 2px 5px -1px rgba(0,0,0,0.75);
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  height: auto;
+  position: fixed;
+  background: $white;
+  margin-top: 25px;
+  width: 450px;
+  @media only screen and (max-width: $desktopBreakpoint) {
+    width: 250px;
+  }
+  @media only screen and (max-width: $tabletBreakpoint) {
+    position: static;
+    flex: none;
+    width: auto;
+    margin: 0;
+  }
+  .currency, .price, .rating, .rooms {
+    margin-bottom: 20px;
+  }
+
+  .price {
+    div.price-input {
+      margin-top: 10px;
+      display: flex;
+      @media only screen and (max-width: $desktopBreakpoint) {
+        flex-direction: column;
+      }
+      input[type=number]::-webkit-inner-spin-button,
+      input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      input[type=number] {
+        margin: 0 10px;
+        width: 150px;
+      }
+      label {
+        @media only screen and (max-width: $desktopBreakpoint) {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+  .rating {
+    div.rating-input {
+      margin-top: 10px;
+    }
+  }
+
+}

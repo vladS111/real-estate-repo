@@ -1,0 +1,15 @@
+@import 'variables.scss';
+
+.main-page {
+  display: flex;
+  font-family: 'Roboto';
+  padding: 25px;
+  width: 100%;
+  @media only screen and (max-width: $tabletBreakpoint) {
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+  }
+}
+
