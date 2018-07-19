@@ -133,6 +133,11 @@
   .filters .price div.price-input {
     margin-top: 10px;
     display: flex; }
+    .filters .price div.price-input .range-error {
+      border: 1px solid #C23F38;
+      border-bottom: none;
+      background: #F06560;
+      border-radius: 4px 4px 0 0; }
     @media only screen and (max-width: 1024px) {
       .filters .price div.price-input {
         flex-direction: column; } }
@@ -141,11 +146,12 @@
       -webkit-appearance: none;
       margin: 0; }
     .filters .price div.price-input input[type=number] {
-      margin: 0 10px;
       width: 150px; }
-    @media only screen and (max-width: 1024px) {
-      .filters .price div.price-input label {
-        margin-top: 10px; } }
+    .filters .price div.price-input label {
+      margin: 0 10px; }
+      @media only screen and (max-width: 1024px) {
+        .filters .price div.price-input label {
+          margin-top: 10px; } }
   .filters .rating div.rating-input {
     margin-top: 10px; }
 

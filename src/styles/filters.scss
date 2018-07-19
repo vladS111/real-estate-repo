@@ -28,19 +28,25 @@
     div.price-input {
       margin-top: 10px;
       display: flex;
+      .range-error {
+        border: 1px solid $darkRed;
+        border-bottom: none;
+        background: $softRed;
+        border-radius: 4px 4px 0 0;
+      }
       @media only screen and (max-width: $desktopBreakpoint) {
         flex-direction: column;
-      }
+        }
       input[type=number]::-webkit-inner-spin-button,
       input[type=number]::-webkit-outer-spin-button {
         -webkit-appearance: none;
         margin: 0;
       }
       input[type=number] {
-        margin: 0 10px;
         width: 150px;
       }
       label {
+        margin: 0 10px;
         @media only screen and (max-width: $desktopBreakpoint) {
           margin-top: 10px;
         }

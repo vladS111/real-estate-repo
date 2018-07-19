@@ -5,6 +5,7 @@ import Input from '@material-ui/core/Input';
 import InputLabel from '@material-ui/core/InputLabel';
 import FormLabel from '@material-ui/core/FormLabel';
 
+
 class PriceFilterComponent extends Component {
 
     constructor(props) {
@@ -14,17 +15,59 @@ class PriceFilterComponent extends Component {
         this.price = props.price;
     }
 
-    handleNumberInput = (event, type) => {
+    handleRangeError = (type) => {
 
-        const { value } = event.target;
+        const priceFrom = document.getElementById("price-from");
+        const priceTo = document.getElementById("price-to");
 
         switch (type) {
 
             case "FROM":
+                priceFrom.classList.add('range-error');
+                break;
+            case "TO":
+                priceTo.classList.add('range-error');
+                break;
+
+            default:
+                return null;
+
+        }
+    }
+
+    removeRangeError = () => {
+        const priceFrom = document.getElementById("price-from");
+        const priceTo = document.getElementById("price-to");
+
+        priceFrom.classList.remove('range-error');
+        priceTo.classList.remove('range-error');
+    }
+
+    handleNumberInput = (event, type) => {
+
+        const { value } = event.target;
+
+
+        switch (type) {
+
+            case "FROM":
+
+                if (value > this.price.to) {
+                    this.handleRangeError("FROM");
+                } else {
+                    this.removeRangeError();
+                }
+
                 this.price.from = +value;
                 break;
 
             case "TO":
+
+                if (value < this.price.from) {
+                    this.handleRangeError("TO");
+                } else  {
+                    this.removeRangeError();
+                }
                 this.price.to = +value;
                 break;
 

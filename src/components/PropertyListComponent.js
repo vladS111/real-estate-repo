@@ -81,7 +81,6 @@ class PropertyListComponent extends Component {
         const { rooms, price, rating, currency, quotes } = this.props.filters;
 
         const calculatedPrice = this.getCalculatedPrice(price, currency, quotes);
-        console.log(calculatedPrice);
 
         const filteredProperties = properties
             .filter(property => property.rating >= rating)
@@ -96,6 +95,7 @@ class PropertyListComponent extends Component {
 
     render() {
         const { loading } = this.props.properties;
+
         if (loading) {
             return (
               <div className="property-list loading">
